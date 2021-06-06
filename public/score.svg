@@ -1,0 +1,9 @@
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Placar</title>
+  <rect stroke="#000" id="svg_1" height="47.66681" width="60.66696" y="5" x="5.5001" fill="#fff"/>
+  <text transform="matrix(0.634836 0 0 0.912517 35.1128 3.64557)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="Oswald" font-size="30" stroke-width="0" id="svg_4" y="36.33344" x="89.74931" fill="#000000">X</text>
+  <rect stroke="#000" id="svg_5" height="47.66681" width="60.66696" y="5.33346" x="132.83309" fill="#fff"/>
+ </g>
+</svg>
