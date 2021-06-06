@@ -3,7 +3,6 @@ import CustomFooter from "./components/custom-footer";
 import CustomHead from "./components/custom-head";
 import CustomMenu from "./components/custom-menu";
 import Swal from "sweetalert2";
-import { toJpeg } from 'html-to-image';
 
 export default class CreateTable extends Component {
 
@@ -22,7 +21,7 @@ export default class CreateTable extends Component {
                 table: [],
                 timestamp: ""
             },
-            typefile: "jpeg"
+            typefile: "pdf"
         };
         this.onDownloadTable = this.onDownloadTable.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -62,14 +61,6 @@ export default class CreateTable extends Component {
         let name = this.state.soccerTable.competition.name;
 
         switch (this.state.typefile) {
-            case "img":
-                toJpeg(table, { quality: 0.95 }).then((dataUrl) => {
-                    var link = document.createElement('a');
-                    link.download = `${name}.jpeg`;
-                    link.href = dataUrl;
-                    link.click();
-                });
-                break;
             case "pdf":
                 html2pdf(table, { margin: 0, filename: `${name}.pdf`, image: { type: 'jpeg', quality: 1 } });
                 break;
@@ -159,7 +150,6 @@ export default class CreateTable extends Component {
                             <p className="text-light">Escolha um formato para baixar:</p>
                             <div className="input-group mb-3">
                                 <select name="typefile" value={this.state.typefile} onChange={this.handleChange} className="form-select">
-                                    <option value="img">Imagem</option>
                                     <option value="pdf">PDF</option>
                                 </select>
                                 <div className="input-group-append">
