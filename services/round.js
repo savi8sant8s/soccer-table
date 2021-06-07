@@ -51,6 +51,22 @@ function rotateRight(arr) {
     return arr;
 }
 
+function defineConfrontations(countGroups) {
+    let aux = [1, 2, 2, 1];
+    let confrontations = [];
+
+    let x = 1;
+    while (x < countGroups) {
+        confrontations.push(`${aux[0]}º do grupo ${x} enfrenta ${aux[1]}º do grupo ${x + 1}`);
+        confrontations.push(`${aux[2]}º do grupo ${x} enfrenta ${aux[3]}º do grupo ${x + 1}`);
+        x += 2;
+    }
+    return {
+        name: toStage(countGroups, false), 
+        confrontations: confrontations
+    };
+}
+
 function toCompetitionName(type){
     return {
         1: "Pontos corridos",
@@ -72,4 +88,4 @@ function toStage(countGames, roundTrip){
     return stage;
 }
 
-module.exports = {roundRobin, shuffle, chunks, toCompetitionName, toStage};
+module.exports = {roundRobin, shuffle, chunks, toCompetitionName, toStage, defineConfrontations};

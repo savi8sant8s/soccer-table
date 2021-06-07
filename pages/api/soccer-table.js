@@ -1,4 +1,4 @@
-import { roundRobin, shuffle, chunks, toCompetitionName, toStage } from "../../services/round";
+import { roundRobin, shuffle, chunks, toCompetitionName, toStage, defineConfrontations } from "../../services/round";
 import { checkTableParams } from "../../services/validation";
 
 export default async (req, res) => {
@@ -6,7 +6,7 @@ export default async (req, res) => {
     let tableForm = req.body;
     let checkTableForm = checkTableParams(tableForm);
     if (!checkTableForm.valid) {
-      res.status(400).json({ status: checkTableForm.status, msg: checkTableForm.msg });
+      res.status(200).json({ status: checkTableForm.status, msg: checkTableForm.msg });
     }
     else {
       let response = {};
@@ -29,6 +29,7 @@ export default async (req, res) => {
             let secondTurn = roundRobin(tableForm.participants, true);
             rounds = rounds.concat(secondTurn);
           }
+          response.countRounds = rounds.length;
           response.table = rounds;
           break;
         case 2:
@@ -44,6 +45,21 @@ export default async (req, res) => {
             eliminatory.push(games);
           }
           response.table = eliminatory;
+          break;
+        case 3:
+          response.countParticipants = tableForm.participants.length;
+          let groups = chunks(tableForm.participants, 4);
+          response.stage = defineConfrontations(groups.length);
+          let roundsPerGroup = [];
+          for (let x = 0; x < groups.length; x++) {
+            let rounds_ = { group: groups[x], rounds: roundRobin(groups[x]) };
+            if (tableForm.roundTrip == 1) {
+              let secondTurn = roundRobin(groups[x], true);
+              rounds_.rounds = rounds_.rounds.concat(secondTurn);
+            }
+            roundsPerGroup.push(rounds_);
+          }
+          response.table = roundsPerGroup;
           break;
       }
       res.status(200).json(response);

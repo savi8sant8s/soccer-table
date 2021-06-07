@@ -9,7 +9,7 @@ function checkTableParams(table){
         return {valid: false, status: "TYPE_INVALID", msg: "Tipo de competição inválido."};
     }
     else if (!checkCountParticipants(table.participants, table.type)){
-        return {valid: false, status: "Cparticipants_INVALID", msg: "Quantidade de participantes inválida."};
+        return {valid: false, status: "CPARTICPANTS_INVALID", msg: "Quantidade de participantes inválida."};
     }
     else if (!new RegExp(/^[0-1]$/).test(table.shuffle)){
         return {valid: false, status: "SHUFFLE_INVALID", msg: "Tipo de embaralhar inválido."};
@@ -31,7 +31,8 @@ function allParamsNotExists(table){
 function checkCountParticipants(participants, type){
     return {
         1 : [2,4,6,8,10,12,14,16,18,20].includes(participants.length),
-        2 : [4,8,16,32].includes(participants.length)
+        2 : [4,8,16,32].includes(participants.length),
+        3 : [8,16,32].includes(participants.length)
     }[type];
 }
 
