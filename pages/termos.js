@@ -1,7 +1,7 @@
 import { Component } from "react";
-import CustomHead from "./components/custom-head";
-import CustomMenu from "./components/custom-menu";
-import CustomFooter from "./components/custom-footer";
+import CustomHead from "../components/custom-head";
+import CustomMenu from "../components/custom-menu";
+import CustomFooter from "../components/custom-footer";
 
 export default class Terms extends Component {
     render() {

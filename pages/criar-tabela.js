@@ -1,11 +1,9 @@
 import { Component } from "react";
-import CustomFooter from "./components/custom-footer";
-import CustomHead from "./components/custom-head";
-import CustomMenu from "./components/custom-menu";
+import CustomFooter from "../components/custom-footer";
+import CustomHead from "../components/custom-head";
+import CustomMenu from "../components/custom-menu";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
 
 export default class CreateTable extends Component {
 
@@ -173,12 +171,12 @@ export default class CreateTable extends Component {
                             </div>
                             <div className="text-light mt-5">
                                 <h4 className="text-center">Dúvidas frequentes:</h4>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item text-light bg-secondary">
+                                <ul className="list-group list-group-flush">
+                                    <li className="list-group-item text-light bg-secondary">
                                         <h5>Como são embaralhados os participantes?</h5>
                                     R - os participantes são embaralhados na lista reordenando cada participante a partir de um número aleatório gerado pelo sistema.
                                 </li>
-                                    <li class="list-group-item text-light bg-secondary">
+                                    <li className="list-group-item text-light bg-secondary">
                                         <h5>Como são geradas as rodadas?</h5>
                                         R - nos tipos de competição <strong>pontos corridos e fase de grupos</strong> as rodadas são geradas baseando-se no algoritmo de torneio <a style={{color: "#F1B24A"}} target="_blank" href="https://pt.wikinew.wiki/wiki/Round-robin_tournament">Round-robin.</a><br></br>
                                     Já no modelo de eliminatória os confrontos são gerados por pares próximos. Exemplo: 1º contra 2º, 3º contra 4º, e assim sucessivamente.

@@ -1,11 +1,11 @@
 import { Component } from "react";
-import CustomFooter from "./components/custom-footer";
-import CustomHead from "./components/custom-head";
-import CustomMenu from "./components/custom-menu";
-import GroupStage from "./components/group-stage";
+import CustomFooter from "../components/custom-footer";
+import CustomHead from "../components/custom-head";
+import CustomMenu from "../components/custom-menu";
+import GroupStage from "../components/group-stage";
+import RunningPoints from "../components/running-points";
+import Eliminatory from "../components/eliminatory";
 import Swal from "sweetalert2";
-import RunningPoints from "./components/running-points";
-import Eliminatory from "./components/eliminatory";
 import { saveAsPng, saveAsJpeg } from 'save-html-as-image';
 
 export default class CreateTable extends Component {
