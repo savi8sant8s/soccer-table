@@ -30,7 +30,7 @@ export default class AppCreateTable extends Component {
                                 <p className="text-light">Aceita de 8, 16 ou 32 participantes.</p>
                             </div>
                             <div className="each-slide">
-                                <h1 className="text-light">Tabela Fase de grupos</h1>
+                                <h1 className="text-light">Tabela de Fase de grupos</h1>
                                 <img height="40%" width="40%" src="gstage.png" />
                                 <p className="text-light">Aceita 4, 8, 16 ou 32 participantes.</p>
                             </div>
