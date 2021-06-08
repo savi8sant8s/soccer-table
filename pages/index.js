@@ -14,7 +14,7 @@ export default class AppCreateTable extends Component {
                 <CustomMenu />
                 <div className="container-fluid text-center text-light">
                     <h1 className="display-4">Crie uma tabela de futebol agora mesmo!</h1>
-                    <p className="lead">Faça uma tabela gratuitamente e de forma rápida. O que você está esperando</p>
+                    <p className="lead">Faça uma tabela gratuitamente e de forma rápida. O que você está esperando!?</p>
                     <a style={{ background: "#F1B24A", color: "white" }} className="btn btn-lg mt-2" href="/criar-tabela">Criar tabela agora</a>
 
                     <div className="slide-container text-center mt-5">
