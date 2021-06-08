@@ -18,6 +18,7 @@ export default class CustomHead extends Component {
                 <title>Tabela de Futebol</title>
                 <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"></script>
             </Head>
         )
     }

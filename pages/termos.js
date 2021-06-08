@@ -10,11 +10,11 @@ export default class Terms extends Component {
                 <CustomHead />
                 <CustomMenu />
                 <div className="container-fluid">
-                    <div className="row justify-content-center mt-5">
-                        <div className="text-center">
-                            <h1 className="text-light">Termos de uso e política de privacidade</h1>
+                    <div className="row justify-content-center">
+                        <div className="jumbotron text-center text-light p-2">
+                            <h1 className="display-4">Termos de uso</h1>
                         </div>
-                        <div className="col-sm-6 text-light p-3 mt-3">
+                        <div style={{textAlign: "justify"}} className="col-sm-6 text-light p-3 mt-3">
                             <h4>Política Privacidade</h4>
                             <p>A sua privacidade é importante para nós. É política do Tabela de Futebol respeitar a sua
                             privacidade

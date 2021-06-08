@@ -6,12 +6,14 @@ import GroupStage from "./components/group-stage";
 import Swal from "sweetalert2";
 import RunningPoints from "./components/running-points";
 import Eliminatory from "./components/eliminatory";
+import { saveAsPng, saveAsJpeg } from 'save-html-as-image';
 
 export default class CreateTable extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            name: "",
             typeId: 0,
             groupStage: {
                 competition: {
@@ -52,9 +54,11 @@ export default class CreateTable extends Component {
                 status: "",
                 table: [],
                 timestamp: ""
-            }
+            },
+            typefile: "jpeg"
         };
         this.handleChange = this.handleChange.bind(this);
+        this.onDownloadTable = this.onDownloadTable.bind(this);
     }
 
     async componentDidMount() {
@@ -63,7 +67,7 @@ export default class CreateTable extends Component {
             this.showAlertTableNotExists();
         }
         else {
-            this.setState({ typeId: soccerTable.competition.typeId });
+            this.setState({ name: soccerTable.competition.name, typeId: soccerTable.competition.typeId });
             switch (soccerTable.competition.typeId) {
                 case 1:
                     this.setState({ runningPoints: soccerTable });
@@ -97,6 +101,21 @@ export default class CreateTable extends Component {
         }, 5000);
     }
 
+    onDownloadTable() {
+        let table = document.getElementById("table");
+        let name = this.state.name;
+        switch (this.state.typefile) {
+            case "jpeg":
+                saveAsJpeg(table, { filename: name, printDate: false });
+                break;
+            case "png":
+                saveAsPng(table, { filename: name, printDate: false });
+                break
+            case "pdf":
+                html2pdf(table, {filename: `${name}.pdf`, quality: 0.95});
+        }
+    }
+
     render() {
         const table = {
             1: <RunningPoints data={this.state.runningPoints} />,
@@ -108,12 +127,27 @@ export default class CreateTable extends Component {
             <div>
                 <CustomHead />
                 <CustomMenu />
-                <div className="container-fluid pt-3">
-                    <div className="text-center text-light mb-3">
-                        <h1>Resultado:</h1>
-                    </div>
-                    <div id="table">
-                        {table}
+                <div className="container-fluid">
+                    <div className="row justify-content-center">
+                        <div className="jumbotron text-center text-light p-2">
+                            <h1 className="display-4">Resultado:</h1>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="text-light">Escolha um formato para baixar:</p>
+                            <div className="input-group mb-3">
+                                <select name="typefile" value={this.state.typefile} onChange={this.handleChange} className="form-select">
+                                    <option value="jpeg">JPEG</option>
+                                    <option value="png">PNG</option>
+                                    <option value="pdf">PDF</option>
+                                </select>
+                                <div className="input-group-append">
+                                    <button onClick={this.onDownloadTable} className="btn btn-warning">Baixar</button>
+                                </div>
+                            </div>
+                            <div id="table" className="justify-content-center p-2">
+                                {table}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <CustomFooter />
