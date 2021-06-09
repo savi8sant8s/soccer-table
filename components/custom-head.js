@@ -13,7 +13,7 @@ export default class CustomHead extends Component {
                 <meta name="rating" content="General" />
                 <meta name="distribution" content="Global" />
                 <meta name="identifier-url" content="https://tabeladefutebol.com.br/" />
-                <meta name="copyright" content="tabeladefutebol.com" />
+                <meta name="copyright" content="tabeladefutebol.com.br" />
                 <meta name="robots" content="index,follow" />
                 <title>Tabela de Futebol</title>
                 <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
