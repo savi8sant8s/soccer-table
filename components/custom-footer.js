@@ -9,9 +9,10 @@ export default class CustomFooter extends Component {
         return (
             <footer className={`footer mt-3 p-3 ${this.props.fixed ? "fixed-bottom" : ""}`}>
                 <div className="container text-center text-light">
-                    <p>Contribua para manter o site no ar e de forma gratuita:</p>
-                    <p style={{ background: "green", fontSize: "15px" }} className="badge">CHAVE PIX: saviosa08@gmail.com</p>
-                    <p>© 2021 Todos os direitos reservados. Construído por <a style={{ color: "#F1B24A" }} target="_blank" href="https://saviosantos.vercel.app/">Sávio Santos</a>.</p>
+                    Construído por <a style={{ color: "#F1B24A" }} target="_blank" href="https://saviosantos.vercel.app/">Sávio Santos.</a><br></br>
+                Este trabalho está licenciado com uma Licença <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                        <img alt="Licença Creative Commons" style={{ borderWidth: "0" }} src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                    </a>
                 </div>
             </footer>
         )

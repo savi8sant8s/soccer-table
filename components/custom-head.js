@@ -19,6 +19,14 @@ export default class CustomHead extends Component {
                 <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald" />
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"></script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M4GZQ6HR8"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments)}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-4M4GZQ6HR8');
+                </script>
             </Head>
         )
     }

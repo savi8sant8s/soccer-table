@@ -37,17 +37,11 @@ export default class AppCreateTable extends Component {
                         </Slide>
                     </div>
 
-                    <div className="row mt-5 justify-content-center">
-                        <h4>Formatos disponíveis para download:</h4>
-                        <div className="col-sm-1 h2 p-1">
-                            <p className="badge bg-primary">JPEG</p>
-                        </div>
-                        <div className="col-sm-1 h2 p-1">
-                            <p className="badge bg-secondary">PNG</p>
-                        </div>
-                        <div className="col-sm-1 h2 p-1">
-                            <p className="badge bg-danger">PDF</p>
-                        </div>
+                    <h4 className="mt-5">Formatos disponíveis para download:</h4>
+                    <div className="d-flex flex-row justify-content-center">
+                        <h4 className="p-1"><span className="badge bg-primary">JPEG</span></h4>
+                        <h4 className="p-1"><span className="badge bg-secondary">PNG</span></h4>
+                        <h4 className="p-1"><span className="badge bg-danger">PDF</span></h4>
                     </div>
                     <a style={{ background: "#F1B24A", color: "white" }} className="btn btn-lg mt-2" href="/criar-tabela">Criar tabela agora</a>
                 </div>
