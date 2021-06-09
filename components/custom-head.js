@@ -21,10 +21,14 @@ export default class CustomHead extends Component {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"></script>
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M4GZQ6HR8"></script>
                 <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments)}
-                    gtag('js', new Date());
-                    gtag('config', 'G-4M4GZQ6HR8');
+                    {`
+                     window.dataLayer = window.dataLayer || [];
+                     function gtag(){dataLayer.push(arguments);}
+                     gtag('js', new Date());
+ 
+                     gtag('config', 'G-4M4GZQ6HR8');
+                    `}
+
                 </script>
             </Head>
         )
