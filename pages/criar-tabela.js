@@ -128,7 +128,7 @@ export default class CreateTable extends Component {
                 <div className="container-fluid">
                     <div className="row justify-content-center">
                         <div className="jumbotron text-center text-light p-2">
-                            <h3 className="display-4">Vamos começar!?</h3>
+                            <h1 className="display-4">Vamos começar!?</h1>
                             <p className="lead">Preencha os campos abaixo para criar sua tabela.</p>
                         </div>
                         <div className="col-sm-6">
@@ -171,12 +171,12 @@ export default class CreateTable extends Component {
                             </div>
                             <div className="text-light mt-5">
                                 <h4 className="text-center">Dúvidas frequentes:</h4>
-                                <ul className="list-group list-group-flush">
-                                    <li className="list-group-item text-light bg-secondary">
+                                <ul style={{textAlign: "justify"}} className="list-group list-group-flush">
+                                    <li style={{background: "rgba(0, 0, 0, 0.1)"}} className="list-group-item text-light">
                                         <h5>Como são embaralhados os participantes?</h5>
                                     R - os participantes são embaralhados na lista reordenando cada participante a partir de um número aleatório gerado pelo sistema.
                                 </li>
-                                    <li className="list-group-item text-light bg-secondary">
+                                    <li style={{background: "rgba(0, 0, 0, 0.1)"}} className="list-group-item text-light">
                                         <h5>Como são geradas as rodadas?</h5>
                                         R - nos tipos de competição <strong>pontos corridos e fase de grupos</strong> as rodadas são geradas baseando-se no algoritmo de torneio <a style={{color: "#F1B24A"}} target="_blank" href="https://pt.wikinew.wiki/wiki/Round-robin_tournament">Round-robin.</a><br></br>
                                     Já no modelo de eliminatória os confrontos são gerados por pares próximos. Exemplo: 1º contra 2º, 3º contra 4º, e assim sucessivamente.
