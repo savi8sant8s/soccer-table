@@ -30,6 +30,7 @@ export default class CustomHead extends Component {
                     `}
 
                 </script>
+                <script data-ad-client="ca-pub-6653771391146869" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             </Head>
         )
     }
