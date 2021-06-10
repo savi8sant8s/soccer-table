@@ -132,7 +132,7 @@ export default class CreateTable extends Component {
                         <div className="jumbotron text-center text-light p-2">
                             <h1 className="display-4">Resultado:</h1>
                         </div>
-                        <div className="col-sm-6">
+                        <div className="col-sm-8">
                             <p className="text-light">Escolha um formato para baixar:</p>
                             <div className="input-group mb-3">
                                 <select name="typefile" value={this.state.typefile} onChange={this.handleChange} className="form-select">

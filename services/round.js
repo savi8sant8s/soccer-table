@@ -67,6 +67,22 @@ function defineConfrontations(countGroups) {
     };
 }
 
+function defineEmptyConfrontations(count) {
+    let arr = [];
+    countStages = Math.log2(count);
+    let i = count / 4;
+    while (arr.length != countStages - 1) {
+        let emptyConfs = [];
+        for (let x = 0; x < i; x++) {
+            emptyConfs.push({stage: toStage(i*2),host: "", visitor: ""});
+        }
+        arr.push(emptyConfs)
+        i /= 2;
+    }
+    let reverseArr = arr.slice().reverse();
+    return arr.concat([[{stage: "Final", host: "", visitor: ""}]], reverseArr);
+}
+
 function toCompetitionName(type){
     return {
         1: "Pontos corridos",
@@ -88,4 +104,4 @@ function toStage(countGames, roundTrip){
     return stage;
 }
 
-module.exports = {roundRobin, shuffle, chunks, toCompetitionName, toStage, defineConfrontations};
+module.exports = {roundRobin, shuffle, chunks, toCompetitionName, toStage, defineConfrontations, defineEmptyConfrontations};

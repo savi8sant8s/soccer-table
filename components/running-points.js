@@ -25,9 +25,9 @@ export default class RunningPoints extends Component {
                             {this.props.data.table.map((round, x) =>
                                 <tbody key={x}>
                                     <tr style={{ background: "gray", color: "white" }}>
-                                        <td>Mandante</td>
+                                        <td></td>
                                         <td className="h4"><strong>{round.description}</strong></td>
-                                        <td>Visitante</td>
+                                        <td></td>
                                     </tr>
                                     {round.games.map((game, y) =>
                                         <tr key={y}>

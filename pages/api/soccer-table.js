@@ -1,4 +1,4 @@
-import { roundRobin, shuffle, chunks, toCompetitionName, toStage, defineConfrontations } from "../../services/round";
+import { roundRobin, shuffle, chunks, toCompetitionName, toStage, defineConfrontations, defineEmptyConfrontations } from "../../services/round";
 import { checkTableParams } from "../../services/validation";
 
 export default async (req, res) => {
@@ -37,13 +37,10 @@ export default async (req, res) => {
           response.competition.stage = toStage(adversaries.length, tableForm.roundTrip == 1);
           let eliminatory = [];
           for (let x = 0; x < adversaries.length; x++) {
-            let games = { description: `${x + 1}º confronto`, confrontrations: [] };
-            games.confrontrations.push({ host: adversaries[x][0], visitor: adversaries[x][1] });
-            if (tableForm.roundTrip == 1) {
-              games.confrontrations.push({ host: adversaries[x][1], visitor: adversaries[x][0] });
-            }
-            eliminatory.push(games);
+            eliminatory.push({ stage: toStage(adversaries.length), host: adversaries[x][0], visitor: adversaries[x][1]});
           }
+          let emptyConfrontations = defineEmptyConfrontations(eliminatory.length);
+          eliminatory = [eliminatory.slice(0, eliminatory.length / 2)].concat(emptyConfrontations, [eliminatory.slice(eliminatory.length / 2)]);
           response.table = eliminatory;
           break;
         case 3:

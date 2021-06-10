@@ -6,6 +6,7 @@ export default class Eliminatory extends Component {
     }
 
     render() {
+
         return (
             <div style={{ background: "white", border: "5px solid white" }}>
                 <div style={{ background: "#2A363B", color: "white" }}>
@@ -23,24 +24,29 @@ export default class Eliminatory extends Component {
                         </div>
                     </div>
                 </div>
-                <table style={{ background: "white"}} className="table text-center">
-                    {this.props.data.table.map((round, x) =>
-                        <tbody key={x}>
-                            <tr style={{ background: "gray", color: "white" }}>
-                                <td></td>
-                                <td className="h4">{round.description}</td>
-                                <td></td>
-                            </tr>
-                            {round.confrontrations.map((game, y) =>
-                                <tr key={y}>
-                                    <td>{game.host}</td>
-                                    <td className="text-muted">x</td>
-                                    <td>{game.visitor}</td>
-                                </tr>
+                <div className="row p-2 mt-2 h-100">
+                    {this.props.data.table.map((confrotation, x) =>
+                        <div className="col-sm my-auto" key={x}>
+                            <p>{Object(confrotation[0]).stage}</p>
+                            {confrotation.map((game, y) =>
+                                <div className="text-center" key={y}>
+                                    <table key={y} className="table table-bordered table-sm">
+                                        <tbody className="border border-dark">
+                                            <tr height="30">
+                                                <td className={game.host.length > 0 ? "bg-secondary text-light" : ""} width="60">{game.host}</td>
+                                                <td width="40"></td>
+                                            </tr>
+                                            <tr height="30">
+                                                <td className={game.host.length > 0 ? "bg-secondary text-light" : ""} width="60">{game.visitor}</td>
+                                                <td width="40"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             )}
-                        </tbody>
+                        </div>
                     )}
-                </table>
+                </div>
             </div>
         )
     }
