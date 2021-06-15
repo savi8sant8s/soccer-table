@@ -14,6 +14,9 @@ export default class CustomMenu extends Component {
                             <a style={{ color: "#F1B24A" }} className="nav-link" href="/criar-tabela">Criar tabela</a>
                         </li>
                         <li className="nav-item">
+                            <a style={{ color: "#F1B24A" }} className="nav-link" href="/arquivos">Arquivos</a>
+                        </li>
+                        <li className="nav-item">
                             <a style={{ color: "#F1B24A" }} className="nav-link" href="/termos">Termos de uso</a>
                         </li>
                     </ul>

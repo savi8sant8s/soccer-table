@@ -21,7 +21,7 @@ export default class RunningPoints extends Component {
                         </div>
                     </div>
                     <div className="mt-2">
-                        <table style={{ background: "white"}} className="table text-center">
+                        <table style={{ background: "white" }} className="table text-center">
                             {this.props.data.table.map((round, x) =>
                                 <tbody key={x}>
                                     <tr style={{ background: "gray", color: "white" }}>
@@ -39,6 +39,10 @@ export default class RunningPoints extends Component {
                                 </tbody>
                             )}
                         </table>
+                        <div className="text-center text-light p-1">
+                            <img width="70" src="logo.png"></img>
+                            <p>Criado por: <a style={{ color: "#F1B24A" }}>tabeladefutebol.com.br</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
