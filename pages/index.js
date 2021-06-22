@@ -44,7 +44,24 @@ export default class AppCreateTable extends Component {
                         <h4 className="p-1"><span className="badge bg-danger">PDF</span></h4>
                     </div>
                     <a style={{ background: "#F1B24A", color: "white" }} className="btn btn-lg mt-2" href="/criar-tabela">Criar tabela agora</a>
+                    
+                    <h4 className="mt-3">Compartilhe:</h4>
+                    <div className="d-flex flex-row justify-content-center mt-2">
+                        <div className="p-1">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://tabeladefutebol.com.br/" target="_blank" style={{ width: "50px", borderRadius: "5px", background: "#3B5998", color: "white" }} className="fa fa-facebook nav-link"></a>
+                        </div>
+                        <div className="p-1">
+                            <a href={`http://twitter.com/share?text=Crie tabelas de futebol gratuitamente&url=https://tabeladefutebol.com.br/&hashtags=tabeladefutebol, criarcampeonatofutebol`} target="_blank" style={{ width: "50px", borderRadius: "5px", background: "#55ACEE", color: "white" }} className="fa fa-twitter nav-link"></a>
+                        </div>
+                        <div className="p-1">
+                            <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://tabeladefutebol.com.br/&title=Crie tabelas de futebol gratuitamente&summary=Crie campeonatos de fase de grupos, pontos corridos ou mata-mata gratuitamente para gerenciar suas competições.`} target="_blank" style={{ width: "50px", borderRadius: "5px", background: "#007bb5", color: "white" }} className="fa fa-linkedin nav-link"></a>
+                        </div>
+                        <div className="p-1">
+                            <a href="whatsapp://send?text=Crie tabelas de futebol gratuitamente: https://tabeladefutebol.com.br/" target="_blank" style={{ width: "50px", borderRadius: "5px", background: "#25d366", color: "white" }} className="fa fa-whatsapp nav-link"></a>
+                        </div>
+                    </div>
                 </div>
+
                 <CustomFooter />
             </div>
         )
