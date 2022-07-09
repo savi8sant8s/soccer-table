@@ -8,8 +8,8 @@ export default class CustomHead extends Component {
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content="Sávio Santos" />
-                <meta name="description" content="Gere tabelas de futebol para suas competições de forma fácil. O que você está esperando!?" />
-                <meta name="keywords" content="gerar tabelas de futebol, criar campeonato, pontos corridos fase de frupos e mata-mata" />
+                <meta name="description" content="Crie tabelas de futebol para suas competições de forma fácil. O que você está esperando!?" />
+                <meta name="keywords" content="criar tabela de futebol, pontos corridos, fase de grupos, mata-mata, baixar" />
                 <meta name="rating" content="General" />
                 <meta name="distribution" content="Global" />
                 <meta name="identifier-url" content="https://tabeladefutebol.com.br/" />
