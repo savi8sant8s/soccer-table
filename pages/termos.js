@@ -12,7 +12,7 @@ export default class Terms extends Component {
                 <div className="container-fluid">
                     <div className="row justify-content-center">
                         <div className="jumbotron text-center text-light p-2">
-                            <h1 className="display-4">Termos de uso</h1>
+                            <h1 className="display-5">Termos de uso</h1>
                         </div>
                         <div style={{textAlign: "justify"}} className="col-sm-6 text-light p-3 mt-3">
                             <h4>Política Privacidade</h4>

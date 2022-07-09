@@ -13,7 +13,7 @@ export default class AppCreateTable extends Component {
                 <CustomHead />
                 <CustomMenu />
                 <div className="container-fluid text-center text-light">
-                    <h1 className="display-4">Crie uma tabela de futebol agora mesmo!</h1>
+                    <h1 className="display-5">Crie uma tabela de futebol agora mesmo!</h1>
                     <p className="lead">Faça gratuitamente e de forma rápida. O que você está esperando!?</p>
                     <a style={{ background: "#F1B24A", color: "white" }} className="btn btn-lg mt-2" href="/criar-tabela">Criar tabela agora</a>
 
@@ -43,7 +43,6 @@ export default class AppCreateTable extends Component {
                         <h4 className="p-1"><span className="badge bg-secondary">PNG</span></h4>
                         <h4 className="p-1"><span className="badge bg-danger">PDF</span></h4>
                     </div>
-                    <a style={{ background: "#F1B24A", color: "white" }} className="btn btn-lg mt-2" href="/criar-tabela">Criar tabela agora</a>
                     
                     <h4 className="mt-3">Compartilhe:</h4>
                     <div className="d-flex flex-row justify-content-center mt-2">

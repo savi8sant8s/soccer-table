@@ -11,7 +11,7 @@ export default class NotFound extends Component {
                 <CustomMenu />
                 <div className="container">
                     <div className="text-center text-light">
-                        <h1 className="display-4">Arquivos</h1>
+                        <h1 className="display-5">Arquivos</h1>
                     </div>
                     <div class="mt-5 row justify-content-center">
                         <div className="card" style={{ width: "20rem", textAlign: "justify" }}>

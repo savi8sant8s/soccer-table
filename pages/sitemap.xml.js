@@ -6,7 +6,7 @@ export const getServerSideProps = ({ res }) => {
     <url>
     <loc>https://tabeladefutebol.com.br/</loc>
     <lastmod>2021-06-20T11:05:00+00:00</lastmod>
-    <priority>1.00</priority>
+    <priority>0.90</priority>
     </url>
     <url>
     <loc>https://tabeladefutebol.com.br/criar-tabela</loc>
@@ -16,7 +16,7 @@ export const getServerSideProps = ({ res }) => {
     <url>
     <loc>https://tabeladefutebol.com.br/arquivos</loc>
     <lastmod>2021-06-20T11:05:00+00:00</lastmod>
-    <priority>1.00</priority>
+    <priority>0.60</priority>
     </url>
     </urlset>
   `;

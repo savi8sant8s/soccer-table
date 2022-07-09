@@ -28,6 +28,9 @@ export default class CustomMenu extends Component {
                     <div className={"collapse navbar-collapse justify-content-end " + show} id="navbarApp">
                         <ul className={show ? "navbar-nav me-auto": "nav nav-tabs"}>
                             <li className="nav-item">
+                                <a style={{ color: "#F1B24A" }} className="nav-link" href="/">Início</a>
+                            </li>
+                            <li className="nav-item">
                                 <a style={{ color: "#F1B24A" }} className="nav-link" href="/criar-tabela">Criar tabela</a>
                             </li>
                             <li className="nav-item">

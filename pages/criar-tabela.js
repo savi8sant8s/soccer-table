@@ -128,8 +128,8 @@ export default class CreateTable extends Component {
                 <div className="container-fluid">
                     <div className="row justify-content-center">
                         <div className="jumbotron text-center text-light p-2">
-                            <h1 className="display-4">Vamos começar!?</h1>
-                            <p className="lead">Preencha os campos abaixo para criar sua tabela.</p>
+                            <h1 className="display-5">Criar tabela de futebol fácil e rápido</h1>
+                            <p className="lead">Preencha os campos abaixo:</p>
                         </div>
                         <div className="col-sm-6">
                             <div className="card" style={{ background: "#F1B24A", color: "#164A41" }}>

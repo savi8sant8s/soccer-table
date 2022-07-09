@@ -130,7 +130,7 @@ export default class CreateTable extends Component {
                 <div className="container-fluid">
                     <div className="row justify-content-center">
                         <div className="jumbotron text-center text-light p-2">
-                            <h1 className="display-4">Resultado:</h1>
+                            <h1 className="display-5">Resultado:</h1>
                         </div>
                         <div className="col-sm-8">
                             <p className="text-light">Escolha um formato para baixar:</p>
