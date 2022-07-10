@@ -27,7 +27,7 @@ export default class AppCreateTable extends Component {
                             <div className="each-slide">
                                 <h1 className="text-light">Tabela de Mata-Mata</h1>
                                 <img height="40%" width="40%" src="elim.png" />
-                                <p className="text-light mt-2">Aceita de 8, 16 ou 32 participantes.</p>
+                                <p className="text-light mt-2">Aceita 8, 16 ou 32 participantes.</p>
                             </div>
                             <div className="each-slide">
                                 <h1 className="text-light">Tabela de Fase de Grupos</h1>
