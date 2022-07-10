@@ -128,7 +128,7 @@ export default class CreateTable extends Component {
                 <div className="container-fluid">
                     <div className="row justify-content-center">
                         <div className="jumbotron text-center text-light p-2">
-                            <h1 className="display-5">Criar tabela de futebol fácil e rápido</h1>
+                            <h1 className="display-6">Criar tabela de futebol fácil e rápido</h1>
                             <p className="lead">Preencha os campos abaixo:</p>
                         </div>
                         <div className="col-sm-6">
