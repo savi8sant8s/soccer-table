@@ -69,7 +69,7 @@ function defineConfrontations(countGroups) {
 
 function defineEmptyConfrontations(count) {
     let arr = [];
-    countStages = Math.log2(count);
+    let countStages = Math.log2(count);
     let i = count / 4;
     while (arr.length != countStages - 1) {
         let emptyConfs = [];
